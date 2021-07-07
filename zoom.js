@@ -1,4 +1,4 @@
-d3.select("p").style("color", "green");
+d3.selectAll("p").style("color", "green");
 var svg = d3.select("svg");
     margin = 20;
     diameter = +svg.attr("width");
@@ -17,12 +17,12 @@ d3.json("flare.json", function(error, root) {
   if (error) throw error;
 
   root = d3.hierarchy(root)
-      .sum(function(d) { return d.size; })
+      .sum(function(d) { return d.value; })
       .sort(function(a, b) { return b.value - a.value; });
 
   var focus = root,
       nodes = pack(root).descendants();
-      view;
+      // view;
 
   var circle = g.selectAll("circle")
     .data(nodes)
@@ -35,9 +35,10 @@ d3.json("flare.json", function(error, root) {
     .data(nodes)
     .enter().append("text")
       .attr("class", "label")
-      .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
-      .style("display", function(d) { return d.parent === root ? "inline" : "none"; })
+      .style("fill-opacity", function(d) { return d.parent === root ? 1 : 1; })
+      .style("display", function(d) { return d.parent === root ? "inline" : "inline"; })
       .text(function(d) { return d.data.name; });
+
 
   var node = g.selectAll("circle,text");
 
@@ -59,9 +60,9 @@ d3.json("flare.json", function(error, root) {
 
     transition.selectAll("text")
       .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
-        .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
+        .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 1; })
         .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
-        .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+        .on("end", function(d) { if (d.parent !== focus) this.style.display = "inline"; });
   }
 
   function zoomTo(v) {
@@ -69,4 +70,8 @@ d3.json("flare.json", function(error, root) {
     node.attr("transform", function(d) { return "translate(" + (d.x - v[0]) * k + "," + (d.y - v[1]) * k + ")"; });
     circle.attr("r", function(d) { return d.r * k; });
   }
+
+    // node.filter(function(d) { return !d.children; }).append("text")
+    //   .attr("dy", "0.3em")
+    //   .text(function(d) { return d.data.name.substring(0, d.r / 3); });
 });
