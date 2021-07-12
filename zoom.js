@@ -1,4 +1,3 @@
-d3.selectAll("p").style("color", "green");
 var svg = d3.select("svg");
     margin = 20;
     diameter = +svg.attr("width");
@@ -13,7 +12,10 @@ var pack = d3.pack()
     .size([diameter - margin, diameter - margin])
     .padding(2);
 
-d3.json("flare.json", function(error, root) {
+
+var select = document.getElementById('language');
+var fileselected = select.options[select.selectedIndex].value;
+d3.json(fileselected+".json", function(error, root) {
   if (error) throw error;
 
   root = d3.hierarchy(root)
@@ -75,3 +77,7 @@ d3.json("flare.json", function(error, root) {
     //   .attr("dy", "0.3em")
     //   .text(function(d) { return d.data.name.substring(0, d.r / 3); });
 });
+
+function update(){
+location.reload();
+}
