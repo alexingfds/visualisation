@@ -7,6 +7,7 @@
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <title>Liraries Visualisation</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     
@@ -17,7 +18,7 @@
 <header>
   
 <div class="topnav">
-  <a class="active" href="#home">Home</a>
+  <a class="active" href="index.html">Home</a>
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
   <input type="button" class="submit" id="submit_form" onclick="checkInput()" value="Submit">
@@ -26,26 +27,17 @@
 </div>
 </header>
 
-  <!--BEGIN SEARCH BOX -->
-<!-- <div class="search_box" style="display: inline-block;>
-
-    <form action="" id="form2">
-        <div >
-            <input type="text" id="search">
-            <input type="button" id="submit_form" onclick="checkInput()" value="Submit">
-        </div>
-    </form>
-
-</div> -->
-<!--END SEARCH BOX -->
 
 
-    
-   <!-- <div style="  display: block; margin: auto;"> -->
 
-    <div  style= "margin: auto; display: block";>
-      
-<select id="selection" onChange="update()">
+    <div >
+ 
+  <div >
+    <!-- Control the column width, and how they should appear on different devices -->
+    <div class="row">
+      <div class="col-sm-3 verticalborder"  style="background-color:white; float: left;">
+
+  <select class="box col-sm-12"  id="selection" onChange="update()">
   <option value="DatamaxEpsilon0.7epsilonStep0.05minpoint10strnblibrairie1459Date10_07_2021_16_41_13">DatamaxEpsilon0.7epsilonStep0.05minpoint10</option>
   <option value="DatamaxEpsilon0.7epsilonStep0.012minpoint10strnblibrairie1459Date12_07_2021_10_24_27"> DatamaxEpsilon0.7epsilonStep0.012minpoint10</option>
   <option value="DatamaxEpsilon0.7epsilonStep0.012minpoint2strnblibrairie1459Date12_07_2021_07_24_46">DatamaxEpsilon0.7epsilonStep0.012minpoint2 </option>
@@ -59,37 +51,46 @@
   <option value="DatamaxEpsilon0.9epsilonStep0.05minpoint10strnblibrairie1459Date10_07_2021_23_51_30">DatamaxEpsilon0.9epsilonStep0.05minpoint10 </option>
   <option value="DatamaxEpsilon0.7epsilonStep0.05minpoint20strnblibrairie1459Date10_07_2021_20_57_49"> DatamaxEpsilon0.7epsilonStep0.05minpoint20</option>
   <option value="DatamaxEpsilon0.7epsilonStep0.05minpoint10strnblibrairie1459Date10_07_2021_16_41_13">DatamaxEpsilon0.7epsilonStep0.05minpoint10 </option>
-  <option value="DatamaxEpsilon0.7epsilonStep0.05minpoint3strnblibrairie18Date10_07_2021_16_39_38">DatamaxEpsilon0.7epsilonStep0.05minpoint3</option>
-  <option value="DatamaxEpsilon0.7epsilonStep0.05minpoint3strnblibrairie18Date10_07_2021_16_39_28">DatamaxEpsilon0.7epsilonStep0.05minpoint3</option>
-  <option value="DatamaxEpsilon0.7epsilonStep0.05minpoint3strnblibrairie18Date10_07_2021_16_37_17">DatamaxEpsilon0.7epsilonStep0.05minpoint3</option>
-
-
+ 
   
-
 </select>
 
+      </div>
 
-  
-  <div class="range-slider">
-    <span id="rs-bullet" class="rs-label">00</span>
-    <input id="rs-range-line" class="rs-range" type="range" value="0" min="0" max="200">
-    
+
+
+      <div class="col-sm-9" style="background-color:white;">
+        <div class="myBox" style= " padding: 2px ;background-color:white";>
+        </div>
+
+   <!--    </div>
+
+      <div class="col-sm-1" style="background-color: white;">
+        
+      </div> -->
+    </div></div>
   </div>
-  
-
-
-
 </div>
-<div class="myBox" style= "margin: auto; display: block";>
-  <!-- <svg id="svg" width="1200" height="1200" style= "margin: auto; display: block"></svg> -->
-</div>
+
+
+
+
+
+
+
+
 
    
 
 
 
-    <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
     <script src="zoom.js"></script>
 
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+    <div class="copyright">
+    <p>&copy 2021- Richardson Alexandre</p>
+  </div>
+</div>
 </body>
 </html> 
