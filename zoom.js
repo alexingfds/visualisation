@@ -15,7 +15,8 @@ console.log(width);
 var svg = d3.select(".myBox")
 .append("svg")
 .attr("width", width)
-.attr("height", height);
+.attr("height", height)
+.attr("class","svg");
 
 
 // var svg = d3.select("svg");
@@ -126,7 +127,8 @@ d3.selectAll('svg').remove();
 var svg = d3.select(".myBox")
 .append("svg")
 .attr("width", width)
-.attr("height", height);
+.attr("height", height)
+.attr("class","svg");
 
 
 // var svg = d3.select("svg");
@@ -233,7 +235,8 @@ d3.selectAll('svg').remove();
 var svg = d3.select(".myBox")
 .append("svg")
 .attr("width", width)
-.attr("height", height);
+.attr("height", height)
+.attr("class","svg");
 
 
 // var svg = d3.select("svg");
