@@ -36,7 +36,7 @@ var pack = d3.pack()
 
 
 var select = document.getElementById('selection');
-var fileselected = select.options[select.selectedIndex].value;
+var fileselected = filename()
 d3.json(fileselected+".json", function(error, root) {
 if (error) throw error;
 
@@ -81,7 +81,7 @@ var text = g.selectAll("text")
 var node = g.selectAll("circle,text");
 
 svg
-  .style("background", color(-1))
+  .style("background", color(0))
   .on("click", function() { zoom(root); });
 
 zoomTo([root.x, root.y, root.r * 2 + margin]);
@@ -140,7 +140,7 @@ g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diamet
 
 
 var select = document.getElementById('selection');
-var fileselected = select.options[select.selectedIndex].value;
+var fileselected = filename()
 d3.json(fileselected+".json", function(error, root) {
 if (error) throw error;
 
@@ -183,7 +183,7 @@ var text = g.selectAll("text")
 var node = g.selectAll("circle,text");
 
 svg
-  .style("background", color(-1))
+  .style("background", color(0))
   .on("click", function() { zoom(root); });
 
 zoomTo([root.x, root.y, root.r * 2 + margin]);
@@ -248,7 +248,7 @@ g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diamet
 
 
 var select = document.getElementById('selection');
-var fileselected = select.options[select.selectedIndex].value;
+var fileselected = filename()
 d3.json(fileselected+".json", function(error, root) {
 if (error) throw error;
 
@@ -294,7 +294,7 @@ var text = g.selectAll("text")
 var node = g.selectAll("circle,text");
 
 svg
-  .style("background", color(-1))
+  .style("background", color(0))
   .on("click", function() { zoom(root); });
 
 zoomTo([root.x, root.y, root.r * 2 + margin]);
@@ -330,5 +330,15 @@ circle.attr("r", function(d) { return d.r * k; });
 }
  
    
+}
+
+function filename(){
+    console.log(output2.innerHTML)
+     console.log(output.innerHTML)
+      console.log(output1.innerHTML)
+
+      console.log('DatamaxEpsilon'+output.innerHTML+'epsilonStep'+output2.innerHTML+'minpoint'+output1.innerHTML)
+      return 'DatamaxEpsilon'+output.innerHTML+'epsilonStep'+output2.innerHTML+'minpoint'+output1.innerHTML
+      
 }
 

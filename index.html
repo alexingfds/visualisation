@@ -11,18 +11,22 @@
 </head>
 <body>
     
-    <h1>Visualization</h1>
+    <h1>LibScanDroid</h1>
 
 
 
 <header>
   
 <div class="topnav">
+
   <a class="active" href="index.html">Home</a>
   <a href="#about">About</a>
   <a href="#contact">Contact</a>
+
   <input type="button" class="submit" id="submit_form" onclick="checkInput()" value="Submit">
   <input type="text" id="search" placeholder="Search..">
+  <input type="file" id="myfile" name="myfile">
+
   
 </div>
 </header>
@@ -38,9 +42,23 @@
 
       <div class="col-sm-3 verticalborder"  style="background-color:white;">
                       <div style="background-color:white; padding: 2px;">
+<div>
+    <p>Parameters </p>
+</div>
+<div class="slidecontainer">
+  <input type="range" min="0" max="1" value="0.6" class="slider" id="myRange" step="0.1" onChange="update()">
+  <p>MaxEpsilon: <span id="demo"></span></p>
+</div>
+<div class="slidecontainer">
+  <input type="range" min="2" max="20" value="6" class="slider" id="myRange1"step="1" onChange="update()">
+  <p>MinPoints: <span id="demo1"></span></p>
+</div>
 
-
-  <select class="box col-sm-12"  id="selection" onChange="update()">
+<div class="slidecontainer">
+  <input type="range" min="0.01" max="0.2" value="0.05" class="slider" id="myRange2" step="0.01" onChange="update()">
+  <p>StepEpsilon: <span id="demo2"></span></p>
+</div>
+<!--   <select class="box col-sm-12"  id="selection" onChange="update()">
   <option value="DatamaxEpsilon0.7epsilonStep0.05minpoint10strnblibrairie1459Date10_07_2021_16_41_13">DatamaxEpsilon0.7epsilonStep0.05minpoint10</option>
   <option value="DatamaxEpsilon0.7epsilonStep0.012minpoint10strnblibrairie1459Date12_07_2021_10_24_27"> DatamaxEpsilon0.7epsilonStep0.012minpoint10</option>
   <option value="DatamaxEpsilon0.7epsilonStep0.012minpoint2strnblibrairie1459Date12_07_2021_07_24_46">DatamaxEpsilon0.7epsilonStep0.012minpoint2 </option>
@@ -56,7 +74,40 @@
   <option value="DatamaxEpsilon0.7epsilonStep0.05minpoint10strnblibrairie1459Date10_07_2021_16_41_13">DatamaxEpsilon0.7epsilonStep0.05minpoint10 </option>
  
   
-</select>
+</select> -->
+
+<script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+}
+</script>
+<script>
+var slider1 = document.getElementById("myRange1");
+var output1 = document.getElementById("demo1");
+output1.innerHTML = slider1.value;
+
+slider1.oninput = function() {
+  output1.innerHTML = this.value;
+}
+</script>
+<script>
+var slider2 = document.getElementById("myRange2");
+var output2 = document.getElementById("demo2");
+output2.innerHTML = slider2.value;
+
+slider2.oninput = function() {
+  output2.innerHTML = this.value;
+}
+</script>
+<script>
+
+
+    </script>
+
 </div>
       </div>
 
