@@ -1,3 +1,45 @@
+
+/*slider for dashboard*/
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('contrasticon.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url('test.jpg');
+  cursor: pointer;
+}
+
+
+
 /*border left for selection*/
 .verticalborder {
   border: 3px solid #E9E9E9;
@@ -100,6 +142,7 @@ body {
   font-size: 17px;
 }
 
+
 .topnav input[type=button] {
   float: right;
   padding: 6px;
@@ -108,8 +151,16 @@ body {
   border: none;
   font-size: 17px;
 }
+.topnav input[type=file] {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+}
 @media screen and (max-width: 600px) {
-  .topnav a, .topnav input[type=text]  {
+  .topnav a, .topnav input[type=text] input[type='file'] {
     float: none;
     display: block;
     text-align: left;
@@ -118,7 +169,7 @@ body {
     padding: 14px;
   }
   
-  .topnav input[type=text] {
+  .topnav input[type=text] input[type='file'] {
     border: 1px solid #ccc;  
   }
 
