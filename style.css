@@ -4,7 +4,7 @@
   width: 100%;
 }
 
-.slider {
+/* .slider {
   -webkit-appearance: none;
   width: 100%;
   height: 10px;
@@ -28,7 +28,7 @@
   border: 0;
   background: url('contrasticon.png');
   cursor: pointer;
-}
+} */
 
 .slider::-moz-range-thumb {
   width: 23px;
