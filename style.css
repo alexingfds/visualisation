@@ -4,7 +4,7 @@
   width: 100%;
 }
 
-/* .slider {
+ .slider {
   -webkit-appearance: none;
   width: 100%;
   height: 10px;
@@ -20,7 +20,7 @@
   opacity: 1;
 }
 
-.slider::-webkit-slider-thumb {
+/* .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 23px;
@@ -30,13 +30,13 @@
   cursor: pointer;
 } */
 
-.slider::-moz-range-thumb {
+/* .slider::-moz-range-thumb {
   width: 23px;
   height: 24px;
   border: 0;
   background: url('test.jpg');
   cursor: pointer;
-}
+} */
 
 
 
