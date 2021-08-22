@@ -338,7 +338,7 @@ function filename(){
       console.log(output1.innerHTML)
 
       console.log('DatamaxEpsilon'+output.innerHTML+'epsilonStep'+output2.innerHTML+'minpoint'+output1.innerHTML)
-      return 'DatamaxEpsilon'+output.innerHTML+'epsilonStep'+output2.innerHTML+'minpoint'+output1.innerHTML
+      return 'data/'+'DatamaxEpsilon'+output.innerHTML+'epsilonStep'+output2.innerHTML+'minpoint'+output1.innerHTML
       
 }
 
